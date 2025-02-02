@@ -8,7 +8,7 @@ string Line::getText() const
     return text;
 }
 
-size_t Line::getLength() const
+int Line::getLength() const
 {
     return text.length();
 }
