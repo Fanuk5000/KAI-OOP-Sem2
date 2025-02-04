@@ -1,12 +1,19 @@
 ﻿using System;
 
-namespace app
+namespace LineApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            Console.WriteLine("Enter some text:");
+            string text = Console.ReadLine();
+
+            Line line = new Line(text);
+
+            Console.WriteLine($"Text: {line.getText()}");
+            Console.WriteLine($"Length of text: {line.getLen()}");
+            Console.WriteLine($"Sorted text: {line.sort()}");
         }
     }
 }

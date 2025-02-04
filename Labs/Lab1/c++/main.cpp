@@ -10,7 +10,7 @@ int main()
 
     Line line(input);
 
-    cout << "Input text: " << input << endl;
+    cout << "Input text: " << line.getText() << endl;
     cout << "Length of the text: " << line.getLength() << endl;
 
     line.sortDescending();
