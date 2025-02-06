@@ -8,22 +8,13 @@ class Line
 {
 
 public:
-    Line(const std::string &text) : text(text) {}
+    Line(const std::string &text);
 
-    int getLength() const
-    {
-        return text.length();
-    }
+    int getLength() const;
 
-    void sortDescending()
-    {
-        std::sort(text.begin(), text.end(), std::greater<char>());
-    }
+    void sortDescending();
 
-    std::string getText() const
-    {
-        return text;
-    }
+    std::string getText() const;
 
 private:
     std::string text;
