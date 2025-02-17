@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace LineApp
 {
@@ -13,10 +12,10 @@ namespace LineApp
             Line line = new Line(text);
             Line line2 = new Line(line);
 
-            Console.WriteLine($"Copy of line: {RuntimeHelpers.GetHashCode(line2.getText())}\n");
+            Console.WriteLine($"Copy of line: {line2.getText()}\n");
 
 
-            Console.WriteLine($"Text: {RuntimeHelpers.GetHashCode(line.getText())}");
+            Console.WriteLine($"Text: {line.getText()}");
             Console.WriteLine($"Length of text: {line.getLen()}");
             Console.WriteLine($"Sorted text: {line.sort()}");
         }
