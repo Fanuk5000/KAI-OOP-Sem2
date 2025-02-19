@@ -18,6 +18,16 @@ namespace LineApp
             Console.WriteLine($"Text: {line.getText()}");
             Console.WriteLine($"Length of text: {line.getLen()}");
             Console.WriteLine($"Sorted text: {line.sort()}");
+
+            // line = null;
+            // line2 = null;
+
+            // // Force garbage collection
+            // GC.Collect();
+            // GC.WaitForPendingFinalizers();
+
+            // Console.WriteLine("End of Main");
+            // Console.ReadKey();
         }
     }
 }
