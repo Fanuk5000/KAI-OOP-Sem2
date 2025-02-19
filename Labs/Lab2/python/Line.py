@@ -19,3 +19,7 @@ class Line(ABC):
     @abstractmethod
     def get_lenght(self):
         pass
+    
+    @abstractmethod
+    def __del__(self):
+        pass

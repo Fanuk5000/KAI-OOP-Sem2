@@ -20,6 +20,11 @@ namespace LineApp
             this.text = other.text;
         }
 
+        ~Line()
+        {
+            Console.WriteLine("The finalizer is executing.");
+        }
+
         public string getText()
         {
             return text;

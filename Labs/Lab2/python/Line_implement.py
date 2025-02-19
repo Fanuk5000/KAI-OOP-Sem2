@@ -15,3 +15,6 @@ class Line(Line):
     
     def get_lenght(self):
         return len(self.__text)
+    
+    def __del__(self):
+        print("Destructor called")
