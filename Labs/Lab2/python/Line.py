@@ -4,9 +4,9 @@ class Line(ABC):
     def __init__(self, text = ""):
         pass
     
-    @abstractmethod
-    def copy_line(self):
-        pass
+    # @abstractmethod
+    # def copy_line(self):
+    #     pass
     
     @abstractmethod
     def get_line(self):

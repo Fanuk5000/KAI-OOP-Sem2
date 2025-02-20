@@ -1,11 +1,18 @@
 from Line import Line
 
 class Line(Line):
-    def __init__(self, text = ""):
-        self.__text = text
+    def __init__(self, *args):
+        "Analog of overloading"
+        if not bool(args):
+            self.__text = ""
+            print(args, "args")
+        elif type(args[0]) == str:
+            self.__text = args[0]
+        else:
+            self.__text = args[0].get_line()
     
-    def copy_line(self)->Line:
-        return Line(self.__text)
+    # def copy_line(self)->Line:
+    #     return Line(self.__text)
     
     def get_line(self)->str:
         return self.__text
