@@ -1,4 +1,4 @@
-from ILine import ILine
+from iLine import ILine
 
 class Line(ILine):
     def __init__(self, *args):
