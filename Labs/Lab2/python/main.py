@@ -1,4 +1,4 @@
-from Line_implement import Line
+from line import Line
 
 if __name__ == "__main__":
     text:str = input("Enter some text: ")
