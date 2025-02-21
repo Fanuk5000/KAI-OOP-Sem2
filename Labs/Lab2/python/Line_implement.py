@@ -1,6 +1,6 @@
-from Line import Line
+from ILine import ILine
 
-class Line(Line):
+class Line(ILine):
     def __init__(self, *args):
         "Analog of overloading"
         if not bool(args):

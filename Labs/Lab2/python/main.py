@@ -5,10 +5,12 @@ if __name__ == "__main__":
     
     line = Line(text)
     line2 = Line(line)
-
+    
+    # print(line2.__text)
+    
     print(f"\nLine:{line.get_line()}\nLen: {line.get_lenght()}\nID: {id(line)}\n")
     print(f"Copy of line: {line2.get_line()}\nID: {id(line2)}")
     
     
     line.sort_descending()
-    print("\nLine after sort:",line.get_line())
+    print(f"\nLine after sort: {line.get_line()}")

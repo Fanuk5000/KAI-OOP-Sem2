@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod #Abstract Base Class
-class Line(ABC):
+
+class ILine(ABC):
     @abstractmethod
     def __init__(self, *args):
         pass
