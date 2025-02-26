@@ -31,8 +31,12 @@ class Triangle(ABS_Triangle):
         print("y setter")
         
     def __add__(self, other):
-        x = self.x + other.x
-        y = self.y + other.y
+        if type(other) == Triangle:
+            x = self.x + other.x
+            y = self.y + other.y
+        else:
+            x = self.x + other
+            y = self.y + other
         return Triangle(x, y)
     
     def __mul__(self, other):
