@@ -4,7 +4,7 @@ class Triangle(ABS_Triangle):
     def __init__(self, *args):
         if not bool(args):
             self.__x = self.__y = 0
-        elif len(args) == 2 and all(type(temp) == int for temp in args):
+        elif len(args) == 2 and all(type(temp) in (int, float) for temp in args):
             self.__x = args[0]
             self.__y = args[1]
         elif type(args[0]) == Triangle:
@@ -12,20 +12,20 @@ class Triangle(ABS_Triangle):
             self.__x = t.x
             self.__y = t.y
     
-    @property    
-    def x(self)->int:
+    @property
+    def x(self)->float:
         return self.__x
     
     @x.setter
-    def x(self, new_x:int):
+    def x(self, new_x:float):
         self.__x = new_x
         
     @property    
-    def y(self)->int:
+    def y(self)->float:
         return self.__y
     
     @y.setter
-    def y(self, new_y:int):
+    def y(self, new_y:float):
         self.__y = new_y
         
     def __add__(self, other):
