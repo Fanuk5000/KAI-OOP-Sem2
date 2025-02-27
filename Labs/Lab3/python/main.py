@@ -7,9 +7,8 @@ if __name__ == "__main__":
     
     t3 = t3*2
     t1 = t2+t3
-    print(t3.x, t3.y)
     
-    # print(Triangle.calculate_area(t1, t2, t3))
-    # t4 = Triangle(t1)
-    # t3 = t1+t2
-    # print(t3.x, t3.y)
+    print(f"t1: {t1.x}, {t1.y}")
+    print(f"t2: {t2.x}, {t2.y}")
+    print(f"t3: {t3.x}, {t3.y}")
+    
