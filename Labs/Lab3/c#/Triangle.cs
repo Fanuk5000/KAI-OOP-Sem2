@@ -56,13 +56,30 @@ namespace TriangleApp
             return new Triangle(a.X * value, a.Y * value);
         }
 
-        private static calculate_sides(Triangle a, Triangle b, Triangle c)
+        private static (double, double, double) CalculateSides(Triangle a, Triangle b, Triangle c)
         {
-            side_ab = Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2))
-            side_ac = Math.Sqrt(Math.Pow(a.X - c.X, 2) + Math.Pow(a.Y - c.Y, 2))
-            side_bc = Math.Sqrt(Math.Pow(b.X - c.X, 2) + Math.Pow(b.Y - c.Y, 2))
+            double side_ab = Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
+            double side_ac = Math.Sqrt(Math.Pow(a.X - c.X, 2) + Math.Pow(a.Y - c.Y, 2));
+            double side_bc = Math.Sqrt(Math.Pow(b.X - c.X, 2) + Math.Pow(b.Y - c.Y, 2));
 
-            return side_ab, side_ac, side_bc
+            return (side_ab, side_ac, side_bc);
+        }
+
+        public static double calculate_perimetr(Triangle a, Triangle b, Triangle c)
+        {
+            (double side_ab, double side_ac, double side_bc) = Triangle.CalculateSides(a, b, c);
+
+            return Math.Round(side_ab + side_ac + side_bc, 2);
+        }
+
+        public static double calculate_area(Triangle a, Triangle b, Triangle c)
+        {
+            (double side_ab, double side_ac, double side_bc) = Triangle.CalculateSides(a, b, c);
+
+            double p = Math.Round(side_ab + side_ac + side_bc, 2) / 2;
+            double s = Math.Round(Math.Sqrt(p * (p - side_ab) * (p - side_ac) * (p - side_bc)), 2);
+
+            return s;
         }
     }
 }
