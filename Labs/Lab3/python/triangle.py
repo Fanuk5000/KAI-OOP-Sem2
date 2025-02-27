@@ -19,7 +19,6 @@ class Triangle(ABS_Triangle):
     @x.setter
     def x(self, new_x:int):
         self.__x = new_x
-        print("x setter")
         
     @property    
     def y(self)->int:
@@ -28,7 +27,6 @@ class Triangle(ABS_Triangle):
     @y.setter
     def y(self, new_y:int):
         self.__y = new_y
-        print("y setter")
         
     def __add__(self, other):
         if type(other) == Triangle:
