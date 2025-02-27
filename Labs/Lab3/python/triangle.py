@@ -53,19 +53,24 @@ class Triangle(ABS_Triangle):
         side_ab = ((a.x-b.x)**2+(a.y-b.y)**2)**0.5
         side_ac = ((a.x-c.x)**2+(a.y-c.y)**2)**0.5
         side_bc = ((b.x-c.x)**2+(b.y-c.y)**2)**0.5
+        
         return side_ab, side_ac, side_bc
     
     @classmethod
     def calculate_area(cls, a, b, c):
         side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
+        
         # p = cls.calculate_perimeter(side_ab, side_ac, side_bc)/2
         p = (side_ab+side_ac+side_bc)/2
         s = (p*(p-side_ab)*(p-side_ac)*(p-side_bc))**0.5
+        print(side_ab, side_ac, side_bc, p, s)
         return round(s, 2)
     
-    def calculate_perimeter(self, a, b, c):
-        side_ab, side_ac, side_bc = self.__calculate_sides(a, b, c)
-        return side_ab+side_ac+side_bc
+    @classmethod
+    def calculate_perimeter(cls, a, b, c):
+        side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
+        
+        return round(side_ab+side_ac+side_bc, 2)
         
     
 

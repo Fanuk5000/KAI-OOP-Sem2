@@ -12,3 +12,5 @@ if __name__ == "__main__":
     print(f"t2: {t2.x}, {t2.y}")
     print(f"t3: {t3.x}, {t3.y}")
     
+    print(Triangle.calculate_perimeter(t1, t2, t3))
+    print(Triangle.calculate_area(t1, t2, t3))
