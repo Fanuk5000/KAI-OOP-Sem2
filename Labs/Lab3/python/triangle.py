@@ -1,7 +1,15 @@
 from abc_triangle import ABS_Triangle
 
 class Triangle(ABS_Triangle):
+    __PERIMETER = None
+    def __new__(cls, *args, **kwargs):
+        if cls.__PERIMETER:
+            cls.__PERIMETER = None
+        instance = super().__new__(cls)
+        return instance    
+    
     def __init__(self, *args):
+        
         if not bool(args):
             self.__x = self.__y = 0
         elif len(args) == 2 and all(type(temp) in (int, float) for temp in args):
@@ -58,17 +66,21 @@ class Triangle(ABS_Triangle):
     def calculate_area(cls, a, b, c):
         side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
         
-        # p = cls.calculate_perimeter(side_ab, side_ac, side_bc)/2
-        p = (side_ab+side_ac+side_bc)/2
+        if cls.__PERIMETER:
+            p = cls.__PERIMETER/2
+            print("used")
+        else:
+            p = (side_ab+side_ac+side_bc)/2
+        
         s = (p*(p-side_ab)*(p-side_ac)*(p-side_bc))**0.5
-        print(side_ab, side_ac, side_bc, p, s)
+        cls.__PERIMETER = None
         return round(s, 2)
     
     @classmethod
     def calculate_perimeter(cls, a, b, c):
         side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
-        
-        return round(side_ab+side_ac+side_bc, 2)
+        cls.__PERIMETER = round(side_ab+side_ac+side_bc, 2)
+        return cls.__PERIMETER
         
     
 
