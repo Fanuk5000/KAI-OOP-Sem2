@@ -2,6 +2,7 @@ from abc_triangle import ABS_Triangle
 
 class Triangle(ABS_Triangle):
     __PERIMETER = None
+    
     def __new__(cls, *args, **kwargs):
         if cls.__PERIMETER:
             cls.__PERIMETER = None
