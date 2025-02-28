@@ -44,6 +44,7 @@ class Triangle(ABS_Triangle):
         else:
             x = self.x + other
             y = self.y + other
+        
         return Triangle(x, y)
     
     def __mul__(self, other):
@@ -53,6 +54,7 @@ class Triangle(ABS_Triangle):
         else:
             x = self.x * other
             y = self.y * other
+        
         return Triangle(x, y)
     
     @staticmethod
