@@ -7,7 +7,7 @@ class Triangle(ABS_Triangle):
         if cls.__PERIMETER:
             cls.__PERIMETER = None
         instance = super().__new__(cls)
-        return instance    
+        return instance
     
     def __init__(self, *args):
         
@@ -82,6 +82,3 @@ class Triangle(ABS_Triangle):
         side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
         cls.__PERIMETER = round(side_ab+side_ac+side_bc, 2)
         return cls.__PERIMETER
-        
-    
-
