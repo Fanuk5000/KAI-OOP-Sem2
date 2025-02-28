@@ -10,7 +10,6 @@ class Triangle(ABS_Triangle):
         return instance
     
     def __init__(self, *args):
-        
         if not bool(args):
             self.__x = self.__y = 0
         elif len(args) == 2 and all(type(temp) in (int, float) for temp in args):
