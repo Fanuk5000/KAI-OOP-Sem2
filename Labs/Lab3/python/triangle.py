@@ -75,10 +75,12 @@ class Triangle(ABS_Triangle):
         
         s = (p*(p-side_ab)*(p-side_ac)*(p-side_bc))**0.5
         cls.__PERIMETER = None
+        
         return round(s, 2)
     
     @classmethod
     def calculate_perimeter(cls, a, b, c):
         side_ab, side_ac, side_bc = cls.__calculate_sides(a, b, c)
         cls.__PERIMETER = round(side_ab+side_ac+side_bc, 2)
+        
         return cls.__PERIMETER
