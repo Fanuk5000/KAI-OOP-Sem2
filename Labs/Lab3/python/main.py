@@ -1,6 +1,7 @@
 from triangle import Triangle
 
 if __name__ == "__main__":
+    print("TestBranch")
     t1 = Triangle(0, 5)
     t2 = Triangle(-3, -2)
     t3 = Triangle(8, 3)
