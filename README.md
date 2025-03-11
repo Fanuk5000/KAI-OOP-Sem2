@@ -1,2 +1,2 @@
 # KAI-OOP-Sem2
-Laboratories from KAI OOP
+Laboratories and homeworks from KAI OOP
