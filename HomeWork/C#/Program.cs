@@ -6,6 +6,7 @@ namespace Matrix2DApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Homework branch")
             int[,] matrix1 = {
             { 1, 2, 3 },
             { 4, 5, 6 },
