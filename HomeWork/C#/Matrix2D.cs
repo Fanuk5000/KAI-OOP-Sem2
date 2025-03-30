@@ -12,7 +12,7 @@ namespace Matrix2DApp
         {
             matrix = new_matrix;
             rows = matrix.GetLength(0);
-            columns = matrix.GetLength(0);
+            columns = matrix.GetLength(1);
         }
 
         public int this[int columnIndex]

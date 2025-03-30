@@ -1,4 +1,5 @@
-﻿using System;
+﻿//variant_8
+using System;
 
 namespace Matrix2DApp
 {
@@ -6,10 +7,11 @@ namespace Matrix2DApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Homework branch");
             int[,] matrix1 = {
-            { 1, 2, 3 },
-            { 4, 5, 6 },
-            { 7, 8, 9 }
+            { 1, 2, 3, 4 },
+            { 5, 6, 7, 8 },
+            { 9, 10, 11, 12}
         };
 
             Matrix2D matrix = new Matrix2D(matrix1);
