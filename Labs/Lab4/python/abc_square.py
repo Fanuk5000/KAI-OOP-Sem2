@@ -1,5 +1,5 @@
 from abc_figure import ABC_Figure
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 class ABC_square(ABC_Figure):
     @abstractmethod
     def area(self):
