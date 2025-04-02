@@ -20,9 +20,9 @@ class Figure(ABC_Figure):
     def get_cords(self):
         return self.__cords
     
-    def get_side(self, side1, side2):
+    def get_side(self, point1, point2):
         try:
-            return ((side1[0] - side2[0])**2 + (side1[1] - side2[1])**2)**0.5
+            return ((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)**0.5
         except:
             raise Exception("Invalid points provided")
         
