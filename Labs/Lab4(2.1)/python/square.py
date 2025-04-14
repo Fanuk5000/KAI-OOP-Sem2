@@ -6,7 +6,7 @@ class Square(Figure):
         if type(vertex) == Square:
             super().__init__(vertex)
             self.__side_len_value = vertex.get_side_length()
-        elif len(vertex) == 2 and all(type(num) == int for num in vertex) and type(side_len) == int:
+        elif type(vertex) == tuple and len(vertex) == 2 and all(type(num) == int for num in vertex) and type(side_len) in (int, float):
             x, y = vertex
             super().__init__((x,y), (x+side_len, y), (x+side_len, y-side_len), (x, y - side_len))
             self.__side_len_value = side_len

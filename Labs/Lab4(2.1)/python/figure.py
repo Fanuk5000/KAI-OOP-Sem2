@@ -5,7 +5,7 @@ class Figure(ABC_Figure):
     def __init__(self, *args):
         if not args:
             self.__cords = {}
-        elif all(type(x) == tuple and len(x) == 2 and all(type(cord) == int for cord in x) for x in args):
+        elif all(type(x) == tuple and len(x) == 2 and all(type(cord) in (int, float) for cord in x) for x in args):
             cords_amount = len(args)
             
             self.__cords = {ascii_uppercase[i]:args[i] for i in range(cords_amount)}
