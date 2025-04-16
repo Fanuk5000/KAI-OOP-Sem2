@@ -1,31 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-namespace FiguresApp
+
+namespace LineApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Square square = new Square((0, 0), 5);
-            Square square2 = new Square(square);
+            Symbols sym1 = new Symbols("**Hello*World*");
+            DisplaySymbolInfo(sym1);
 
-            Console.WriteLine($"Square area: {square.Area()}\nSquare perimeter: {square.Perimeter()}");
-            Console.WriteLine($"Square area: {square2.Area()}\nSquare perimeter: {square2.Perimeter()}");
+            Symbols sym2 = new Symbols("***Polymorphism***");
+            DisplaySymbolInfo(sym2);
 
-            // var cords = square.GetCords();
-            // foreach (var cord in cords)
-            // {
-            //     Console.WriteLine($"{cord.Key}: ({cord.Value.Item1}, {cord.Value.Item2})");
-            // }
+            BigLetters big1 = new BigLetters("abcBBxyzB");
+            DisplayBigLetterInfo(big1);
 
-            // var cords2 = square2.GetCords();
-            // foreach (var cord in cords2)
-            // {
-            //     Console.WriteLine($"{cord.Key}: ({cord.Value.Item1}, {cord.Value.Item2})");
-            // }
+            BigLetters big2 = new BigLetters("BbbBbAAA");
+            DisplayBigLetterInfo(big2);
+        }
 
-            // double sideLength = square.GetSide('A', 'B');
-            // Console.WriteLine($"Side length between A and B: {sideLength}");
+        // 🔸 Метод для демонстрації поліморфізму
+        static void DisplaySymbolInfo(Symbols symbolObj)
+        {
+            Console.WriteLine("=== Symbol Info ===");
+            Console.WriteLine(symbolObj.ToString());
+        }
+
+        static void DisplayBigLetterInfo(BigLetters bigLetterObj)
+        {
+            Console.WriteLine("=== Big Letters Info ===");
+            Console.WriteLine(bigLetterObj.ToString());
         }
     }
 }
