@@ -21,7 +21,17 @@ namespace LineApp
 
         public override int GetLen(string line)
         {
-            return base.GetLen(_line);
+            int uppercaseCount = 0;
+
+            foreach (char c in line)
+            {
+                if (!char.IsDigit(c))
+                {
+                    uppercaseCount++;
+                }
+
+            }
+            return uppercaseCount;
         }
 
         public override int GetSymbolAmount(string line, char symbol = '*')

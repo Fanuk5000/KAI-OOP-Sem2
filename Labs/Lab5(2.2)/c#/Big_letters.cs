@@ -10,7 +10,7 @@ namespace LineApp
         }
         public BigLetters(string input)
         {
-            _line = input.ToUpper();
+            _line = input;
         }
 
         public BigLetters(BigLetters other) : base()
@@ -19,7 +19,16 @@ namespace LineApp
         }
         public override int GetLen(string line)
         {
-            return base.GetLen(_line);
+            int uppercaseCount = 0;
+
+            foreach (char c in line)
+            {
+                if (char.IsUpper(c))
+                {
+                    uppercaseCount++;
+                }
+            }
+            return uppercaseCount;
         }
 
         public override int GetSymbolAmount(string line, char symbol = 'B')
