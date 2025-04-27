@@ -16,7 +16,7 @@ namespace Matrix2DApp
 
             Matrix2D matrix = new Matrix2D(matrix1);
 
-            Console.WriteLine("Product of column 1: " + matrix[1]);
+            Console.WriteLine("Product of column 2: " + matrix[1]);
             Console.WriteLine("Average value: " + matrix.AverageValue);
         }
     }
