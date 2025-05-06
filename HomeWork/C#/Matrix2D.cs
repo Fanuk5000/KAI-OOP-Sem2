@@ -11,8 +11,8 @@ namespace Matrix2DApp
         public Matrix2D(int[,] new_matrix)
         {
             matrix = new_matrix;
-            rows = matrix.GetLength(0);
-            columns = matrix.GetLength(0);
+            rows = matrix.GetLength(0); // gets the number of rows
+            columns = matrix.GetLength(1);
         }
 
         public int this[int columnIndex]
